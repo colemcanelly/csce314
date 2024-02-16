@@ -1,0 +1,48 @@
+Name: Cole McAnelly
+UIN: 630003358
+Resource: N/A
+
+
+Ch. 3 Exercise 1
+----------------------
+What are the types of the following values?
+- [’a’,’b’,’c’] :: [Char]
+    - Homogenous list of type `Char`
+
+- (’a’,’b’,’c’) :: (Char, Char, Char)
+    - Tuple of all type `Char` with arity 3
+
+- [(False, '0'),(True,'1')] :: [(Bool, Char)]
+    - List of tuples of type `Bool` and `Char`
+
+- ([False, True],['0','1']) :: ([Bool], [Char])
+    - Tuple of lists of type `Bool` and `Char`
+
+- [tail, init, reverse] :: [[a] -> [a]]
+    - List of functions that are all of type [a] -> [a],
+        meaning that their input and output are both lists
+
+
+
+Ch. 3 Exercise 3
+----------------------
+
+What are the types of the following functions? 
+- second xs = head (tail xs) :: [a] -> a
+    - Takes in a list and returns a single value
+
+- swap (x, y) = (y, x) :: (a, b) -> (b, a)
+    - Inputs and outputs a tuple
+
+- pair x y = (x, y) :: a -> b -> (a, b)
+    - Inputs 2 individual values and returns a tuple
+
+- double x = x*2 :: Num a => a -> a
+    - Inputs a single value of `Num` type, outputs a single value
+
+- palindrome xs = reverse xs == xs :: Eq a => [a] -> Bool
+    - Inputs an equality type, treats it like a list, and returns a boolean
+
+lessThanHalf x y = x * 2 < y :: Int -> (Int -> Int -> Bool)
+    - Inputs a value and returns a function
+        that inputs 2 values and returns a Boolean
